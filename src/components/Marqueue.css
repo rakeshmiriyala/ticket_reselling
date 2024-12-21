@@ -1,0 +1,28 @@
+/* Marquee.css */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee-wrapper {
+  display: flex;
+  animation: marquee 15s linear infinite;
+}
+
+.animate-marquee {
+  display: flex;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  position: relative;
+}
+
+.animate-marquee > * {
+  flex-shrink: 0;
+}
