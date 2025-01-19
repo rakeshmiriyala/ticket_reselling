@@ -7,6 +7,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "tailwindcss/tailwind.css";
+import festival1 from "../../assets/t-1.png";
+import festival2 from "../../assets/t-2.png";
+import festival3 from "../../assets/t-3.png";
+import festival4 from "../../assets/t-4.png";
+import festival5 from "../../assets/t-5.png";
 
 const Movies = () => {
   // Slick settings generator for each slider
@@ -77,33 +82,15 @@ const Movies = () => {
   const sliderData = [
     {
       title: "Movies",
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/1/16/Cricket_pic.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/4/41/Cricket_game.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cricket_batting.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/5/59/Cricket_field.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/7/7e/Cricket_catch.jpg",
-      ],
+      images: [festival1, festival2, festival3, festival4, festival5],
     },
     {
       title: "Comedy Shows",
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/a/a7/Soccer_ball.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/3/3f/FIFA_World_Cup_Trophy.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/c/c5/Football_pitch.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/6/6f/Football_player_running.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/5/57/Goalkeeper_saves_goal.jpg",
-      ],
+      images: [festival1, festival2, festival3, festival4, festival5],
     },
     {
       title: "Festival Celebration",
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball_dunk.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/5/58/Basketball_court.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/3/3e/Playing_basketball.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/2/24/Basketball_on_hoop.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/f/f9/Basketball_game.jpg",
-      ],
+      images: [festival1, festival2, festival3, festival4, festival5],
     },
   ];
 
@@ -127,7 +114,7 @@ const Movies = () => {
                 <img
                   src={image}
                   alt={`Card ${index + 1}`}
-                  className="w-24 h-24 mx-auto rounded"
+                  className="w-auto h-auto mx-auto rounded"
                 />
               </div>
               <button className="bg-[#DB59FF] text-white py-2 px-4 rounded-2xl hover:bg-blue-600">

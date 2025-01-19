@@ -7,6 +7,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "tailwindcss/tailwind.css";
+import music1 from "../../assets/o-1.jpg";
+import music2 from "../../assets/o-2.jpg";
+import music3 from "../../assets/o-3.jpg";
+import music4 from "../../assets/o-4.jpg";
+import music5 from "../../assets/o-3.jpg";
 
 const Concert = () => {
   // Slick settings generator for each slider
@@ -77,33 +82,15 @@ const Concert = () => {
   const sliderData = [
     {
       title: "Bandd Showsssss",
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/1/16/Cricket_pic.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/4/41/Cricket_game.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cricket_batting.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/5/59/Cricket_field.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/7/7e/Cricket_catch.jpg",
-      ],
+      images: [music1, music2, music3, music4, music5],
     },
     {
       title: "Music Shows",
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/a/a7/Soccer_ball.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/3/3f/FIFA_World_Cup_Trophy.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/c/c5/Football_pitch.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/6/6f/Football_player_running.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/5/57/Goalkeeper_saves_goal.jpg",
-      ],
+      images: [music1, music2, music3, music4, music5],
     },
     {
       title: "Newwwwww",
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball_dunk.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/5/58/Basketball_court.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/3/3e/Playing_basketball.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/2/24/Basketball_on_hoop.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/f/f9/Basketball_game.jpg",
-      ],
+      images: [music1, music2, music3, music4, music5],
     },
   ];
 
@@ -127,7 +114,7 @@ const Concert = () => {
                 <img
                   src={image}
                   alt={`Card ${index + 1}`}
-                  className="w-24 h-24 mx-auto rounded"
+                  className="w-auto h-auto mx-auto rounded"
                 />
               </div>
               <button className="bg-[#DB59FF] text-white py-2 px-4 rounded-2xl hover:bg-blue-600">

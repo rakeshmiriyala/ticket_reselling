@@ -18,7 +18,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#1b0b30] text-white lg:my-8 lg:mx-4 rounded-3xl">
+    <nav
+      className="bg-[#1b0b30] text-white lg:my-8 lg:mx-4 rounded-3xl"
+      data-aos="fade-down" // Apply the fade-down animation to the entire navbar
+    >
       <div className="container mx-auto flex items-center justify-between px-6 py-3 ">
         {/* Left: Logo */}
         <div className="flex-shrink-0">
@@ -54,7 +57,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/sell"
-            className="border-2 border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500"
+            className="border-2 border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.8)] transition-shadow duration-200"
           >
             Sell
           </Link>
@@ -96,12 +99,12 @@ const Navbar = () => {
       {/* Mobile Menu (only visible when hamburger menu is open) */}
       {isOpen && (
         <div
-          className="md:h rounded-3xl bg-white border-2 " // Apply a box around the menu
-          data-aos="fade-down" // Apply the fade-down animation
+          className="md:h rounded-3xl bg-white border-2 "
+          data-aos="fade-down" // Apply the fade-down animation to the mobile menu
         >
           <Link
             to="/sports"
-            className="block px-6 py-3 text-black  rounded-t-lg"
+            className="block px-6 py-3 text-black rounded-t-lg"
           >
             Sports
           </Link>
@@ -113,7 +116,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/concert"
-            className="block px-6 py-3 text-black  rounded-b-lg"
+            className="block px-6 py-3 text-black rounded-b-lg"
           >
             Concert
           </Link>
@@ -127,7 +130,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/sell"
-              className="border-2 border-pink-500 px-5 py-3 rounded-lg hover:bg-pink-500 text-black"
+              className="border-2 border-pink-500 text-black px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.7)] transition-shadow duration-300"
             >
               Sell
             </Link>

@@ -21,15 +21,25 @@ const HeroSection = () => {
       </div>
       <br className="xs:hidden" />
       <div className="description mt-1 lg:px-8 xs:px-8 pt-0 rounded-lg">
-        <p className="lg:text-xl xs:text-lg font-serif md:text-lg sm:text-base text-white">
-          Here, every concert, game, and adventure is just a swap away. Enjoy
+        <p
+          className="lg:text-xl xs:text-lg font-serif md:text-lg sm:text-base text-white"
+          style={{ fontFamily: "Poppins, sans-serif" }}
+        >
+          Turn your unused tickets into someone else’s
         </p>
-        <p className="lg:text-xl xs:text-lg font-serif md:text-lg sm:text-base text-white">
-          Here, every concert, game, and adventure is just a swap away. Enjoy
+        <p
+          className="lg:text-xl xs:text-lg font-serif md:text-lg sm:text-base text-white"
+          style={{ fontFamily: "Poppins, sans-serif" }}
+        >
+          unforgettable experience! Share the excitement and
+        </p>
+        <p
+          className="lg:text-xl xs:text-lg font-serif md:text-lg sm:text-base text-white"
+          style={{ fontFamily: "Poppins, sans-serif" }}
+        >
+          help fill every seat!
         </p>
       </div>
-      <br />
-      <br />
       <br />
 
       {/* Sell Button */}

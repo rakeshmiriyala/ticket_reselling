@@ -93,7 +93,7 @@ const Footer = () => {
           <aside>
             <p>
               Copyright © {new Date().getFullYear()} - All rights reserved by
-              ACME Industries Ltd
+              ESWAP
             </p>
           </aside>
         </footer>
