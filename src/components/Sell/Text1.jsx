@@ -10,7 +10,7 @@ const ResponsiveText = () => {
         </h1>
       </div>
       <div className="description mt-1 p-4 rounded-lg">
-        <p className="lg:text-xl xs:text-lg font-serif md:text-lg lg:pr-80 sm:text-base text-white">
+        <p className="lg:text-xl xs:text-lg font-poppins md:text-lg lg:pr-80 sm:text-base text-white">
           Did we mention that posting your tickets is a breeze? In just three
           simple steps, you can upload, set your price, and pass on your tickets
           for another fan to experience the excitment!

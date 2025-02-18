@@ -10,7 +10,7 @@ const ResponsiveText = () => {
         </h1>
       </div>
       <div className="description mt-1 p-4 rounded-lg">
-        <p className="lg:text-xl xs:text-lg font-serif md:text-lg lg:p sm:text-base text-white">
+        <p className="lg:text-xl xs:text-lg font-poppins md:text-lg lg:p sm:text-base text-white">
           ESWAP makes ticket reselling simple, safe, and social. If you have
           tickets you can’t use, you’re not just losing out on an experience –
           someone else is too! ESWAP connects you to people eager to attend,

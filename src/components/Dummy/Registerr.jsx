@@ -3,7 +3,7 @@
 // RegisterPage.js
 import React from "react";
 import Navbar from "./NavbarSucess";
-import backgroundImage from "../../assets/lo-1.png";
+import backgroundImage from "../../assets/lo.png";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
 
@@ -22,14 +22,14 @@ const RegisterPage = () => {
       <div className="flex flex-col md:flex-row h-auto">
         {/* Left Half */}
         <div
-          className="hidden md:block md:w-1/2 bg-cover bg-center h-[540px]"
+          className="hidden md:block md:w-1/2 bg-cover bg-center h-[720px]"
           style={{
             backgroundImage: `url(${backgroundImage})`,
           }}
         ></div>
 
         {/* Right Half */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-[#120621] text-white p-8">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-[#1A082F] text-white p-8">
           <h1 className="text-4xl font-bold mb-4">Sign up</h1>
           <p className="mb-6 text-[#E176FF]">Sign up now and start swapping</p>
 
@@ -60,8 +60,13 @@ const RegisterPage = () => {
             </button>
           </form>
 
-          <Link to="/login" className="mt-4">
+          <Link to="/login" className="my-4">
             <span className="no-underline">Already have an account? </span>
+            <span className="underline text-[#E176FF]">Login</span>
+          </Link>
+          <p>OR</p>
+          <Link to="/blogin" className="mt-4">
+            <span className="no-underline">Already have an Busines account? </span>
             <span className="underline text-[#E176FF]">Login</span>
           </Link>
         </div>

@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
+import daisyui from 'daisyui';
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -24,9 +25,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        akira: ["Akira Expanded", "sans-serif"], // Add Akira Expanded font
+        akira: ["Akira Expanded"], // Add Akira Expanded font
+        poppins: ["Poppins", "sans-serif"], // Add Poppins font
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [daisyui],
 };

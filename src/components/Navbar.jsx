@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="bg-[#1b0b30] text-white lg:my-8 lg:mx-4 rounded-3xl"
+      className="bg-[#1b0b30] text-white backdrop-filter backdrop-blur-lg z-0 bg-opacity-75  lg:my-8 lg:mx-4 rounded-3xl"
       data-aos="fade-down" // Apply the fade-down animation to the entire navbar
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-3 ">
@@ -37,22 +37,22 @@ const Navbar = () => {
         {/* Middle: Menu options (hidden on small screens) */}
         <div className="hidden md:flex space-x-6">
           <Link to="/sports" className="hover:text-pink-400">
-            Sports
+            SPORTS
           </Link>
           <Link to="/entertainment" className="hover:text-pink-400">
-            Entertainment
+            ENTERTAINMENT
           </Link>
           <Link to="/movies" className="hover:text-pink-400">
-            Movies
+            MOVIES
           </Link>
           <Link to="/concert" className="hover:text-pink-400">
-            Concert
+            CONCERT
           </Link>
         </div>
 
         {/* Right: Buttons */}
-        <div className="hidden md:flex space-x-4">
-          <Link to="/signin" className="px-5 py-2 rounded-lg">
+        <div className="hidden  md:flex space-x-4">
+          <Link to="/signin" className="px-5 hover:text-pink-500 py-2 rounded-lg">
             Sign In
           </Link>
           <Link
@@ -106,20 +106,19 @@ const Navbar = () => {
             to="/sports"
             className="block px-6 py-3 text-black rounded-t-lg"
           >
-            Sports
+            SPORTS
           </Link>
           <Link to="/entertainment" className="block px-6 py-3 text-black ">
-            Entertainment
+            ENTERTAINMENT
           </Link>
           <Link to="/movies" className="block px-6 py-3 text-black ">
-            Movies
+            MOVIES
           </Link>
           <Link
             to="/concert"
             className="block px-6 py-3 text-black rounded-b-lg"
           >
-            Concert
-          </Link>
+            CONCERT          </Link>
 
           <div className="flex flex-col space-y-3 px-6 py-4">
             <Link

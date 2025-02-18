@@ -14,6 +14,11 @@ import Sell from "./components/Sell/Landing";
 import Selll from "./components/Sell/dummy/Landing";
 import LoginPage from "./components/Dummy/Loginn";
 import Dummmy from "./components/Dummy/Dummmy";
+import Profile from "./components/Dummy/Profile";
+import Bregister from './components/Dummy/BusinessRegister'
+import BloginPage from './components/Dummy/BusinessLogin'
+import Bdummmy from './components/Dummy/Bdummy'
+import Bprofile from './components/Dummy/Bprofile'
 
 function App() {
   return (
@@ -21,8 +26,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<Registerr />} />
+        <Route path="/bsignin" element={<Bregister />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/blogin" element={<BloginPage />} />
         <Route path="/dummy" element={<Dummmy />} />
+        <Route path="/bdummy" element={<Bdummmy />} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/bprofile" element={<Bprofile/>} />
         {/* <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} /> */}
         <Route path="/success" element={<Success />} />

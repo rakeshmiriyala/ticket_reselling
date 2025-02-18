@@ -15,7 +15,7 @@ const ResponsiveText = () => {
         </h1>
       </div>
       <div className="description mt-1 p-4 rounded-lg">
-        <p className="lg:text-xl xs:text-lg font-serif md:text-lg sm:text-base text-white">
+        <p className="lg:text-xl xs:text-lg md:text-lg sm:text-base text-white font-poppins">
           Here, every concert, game, and adventure is just a swap away. Enjoy
           seamless ticket reselling and make every moment count with ESWAP!
         </p>

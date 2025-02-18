@@ -21,7 +21,7 @@ const Combined = () => {
       <div className="w-full h-1 bg-gradient-to-r from-pink-500 to-purple-500" />
 
       {/* Reviews Section */}
-      <section className="py-16">
+      <section className="py-8">
         <ReviewsCarousel />
       </section>
     </div>

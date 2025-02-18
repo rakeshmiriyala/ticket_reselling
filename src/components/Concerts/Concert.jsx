@@ -1,11 +1,5 @@
 /* eslint-disable no-unused-vars */
-// Install react-slick and slick-carousel if not done already
-// npm install react-slick slick-carousel
-
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useRef } from "react";
 import "tailwindcss/tailwind.css";
 import music1 from "../../assets/o-1.jpg";
 import music2 from "../../assets/o-2.jpg";
@@ -14,128 +8,98 @@ import music4 from "../../assets/o-4.jpg";
 import music5 from "../../assets/o-3.jpg";
 
 const Concert = () => {
-  // Slick settings generator for each slider
-  const getSettings = (sliderClass) => ({
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false,
-    centerMode: true,
-    centerPadding: "0px",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 770,
-        settings: {
-          slidesToShow: 2,
-          centerMode: false, // Disable center mode for smaller screens
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false, // Disable center mode for smaller screens
-        },
-      },
-      {
-        breakpoint: 375,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false, // Disable center mode for ultra-small screens
-        },
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false, // Disable center mode for the smallest screens
-        },
-      },
-    ],
-    beforeChange: () => {
-      document
-        .querySelectorAll(`.${sliderClass} .slick-slide`)
-        .forEach((slide) => {
-          slide.classList.remove("scale-110", "z-20");
-        });
-    },
-    afterChange: (current) => {
-      const currentSlide = document.querySelector(
-        `.${sliderClass} .slick-slide[data-index="${current}"]`
-      );
-      if (currentSlide) {
-        currentSlide.classList.add("scale-110", "z-20");
-      }
-    },
-  });
+  const scrollContainerRef = useRef(null);
 
+  // Function to handle scroll behavior for left and right buttons
+  const handleScroll = (direction) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const scrollAmount = container.offsetWidth; // Scroll by the width of the container
+      console.log("scrolling", direction, scrollAmount);
+      // Scroll left or right based on button click
+      container.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth", // smooth scrolling
+      });
+    }
+  };
+
+  // Data for the sliders (images and titles)
   const sliderData = [
     {
-      title: "Bandd Showsssss",
-      images: [music1, music2, music3, music4, music5],
+      title: "Band Shows",
+      images: [music1, music2, music3, music4, music5, music1, music3, music4],
     },
     {
       title: "Music Shows",
-      images: [music1, music2, music3, music4, music5],
+      images: [music1, music2, music3, music4, music5, music1, music3, music4],
     },
     {
-      title: "Newwwwww",
-      images: [music1, music2, music3, music4, music5],
+      title: "New Releases",
+      images: [music1, music2, music3, music4, music5, music1, music3, music4],
     },
   ];
 
-  const renderSlider = (title, images, sliderClass) => (
+  // Render each slider with images and title
+  const renderSlider = (title, images) => (
     <div className="mb-12">
-      <br />
-      <h1 className="lg:text-4xl xs:text-3xl xs:pl-5 font-bold text-white text-start lg:pl-8 mb-6">
-        {title}
-      </h1>
-
-      <br />
-      <Slider
-        {...getSettings(sliderClass)}
-        className={`slider ${sliderClass} px-4`}
+      <div className="flex items-center justify-between lg:pl-8 xs:pl-5">
+        <h1 className="lg:text-4xl xs:text-3xl font-bold font-akira text-white text-start mb-6">
+          {title}
+        </h1>
+        <div className="flex gap-4">
+          <button
+            className="bg-black text-white py-2 px-4 rounded-2xl"
+            onClick={() => handleScroll("left")} // Scroll left
+          >
+            {"<"}
+          </button>
+          <button
+            className="bg-black text-white py-2 px-4 rounded-2xl"
+            onClick={() => handleScroll("right")} // Scroll right
+          >
+            {">"}
+          </button>
+        </div>
+      </div>
+      <div
+        ref={scrollContainerRef}
+        className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-4"
+        style={{ display: "flex" }} // Ensure flex layout for horizontal scrolling
       >
         {images.map((image, index) => (
-          <div key={index} className="p-4">
-            <div className="bg-[#120621] text-white rounded-2xl shadow-lg p-6 text-center transition-transform duration-300">
+          <div
+            key={index}
+            className="min-w-[250px] group relative hover:opacity-100 opacity-70 transition-opacity duration-300"
+          >
+            <div
+              className="bg-[#120621] text-white rounded-2xl shadow-lg p-4 text-center 
+              transition-transform duration-300 transform group-hover:scale-105"
+            >
               <h3 className="text-lg font-bold">{`Card ${index + 1}`}</h3>
               <div className="my-4">
                 <img
                   src={image}
                   alt={`Card ${index + 1}`}
-                  className="w-auto h-auto mx-auto rounded"
+                  className="w-[200px] h-[150px] mx-auto rounded object-cover"
                 />
               </div>
-              <button className="bg-[#DB59FF] text-white py-2 px-4 rounded-2xl hover:bg-blue-600">
-                {`Button ${index + 1}`}
+              <button className="bg-[#DB59FF] text-white py-2 px-4 rounded-lg hover:bg-blue-600 cursor-pointer">
+                Watch Now
               </button>
             </div>
+            <div
+              className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"
+            ></div>
           </div>
         ))}
-      </Slider>
-      <br />
-      <br />
-      <br />
-      <div className="bg-[#120621] py-4 text-transparent select-none">fhj</div>
+      </div>
     </div>
   );
 
   return (
-    <div className="container lg:mb-32 mx-0 max-w-fit py-8">
-      {sliderData.map((slider, index) =>
-        renderSlider(slider.title, slider.images, `slider-${index}`)
-      )}
+    <div className="container lg:mb-32 mx-0 py-8 w-full">
+      {sliderData.map((slider) => renderSlider(slider.title, slider.images))}
     </div>
   );
 };

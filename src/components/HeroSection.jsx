@@ -48,7 +48,7 @@ const HeroSection = () => {
           <img
             src={rightImage}
             alt="Hero Side Image"
-            className="rounded-lg shadow-lg object-contain w-full h-auto"
+            className="rounded-3xl w-full h-auto filter contrast-125 brightness-220 shadow-lg"
           />
         </div>
       </div>

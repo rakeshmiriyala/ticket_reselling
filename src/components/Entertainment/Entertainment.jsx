@@ -1,11 +1,5 @@
 /* eslint-disable no-unused-vars */
-// Install react-slick and slick-carousel if not done already
-// npm install react-slick slick-carousel
-
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useRef } from "react";
 import "tailwindcss/tailwind.css";
 import comedy1 from "../../assets/e-1.jpg";
 import comedy2 from "../../assets/e-2.jpg";
@@ -14,128 +8,92 @@ import comedy4 from "../../assets/e-4.jpg";
 import comedy5 from "../../assets/e-2.jpg";
 
 const Entertainment = () => {
-  // Slick settings generator for each slider
-  const getSettings = (sliderClass) => ({
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false,
-    centerMode: true,
-    centerPadding: "0px",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 770,
-        settings: {
-          slidesToShow: 2,
-          centerMode: false, // Disable center mode for smaller screens
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false, // Disable center mode for smaller screens
-        },
-      },
-      {
-        breakpoint: 375,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false, // Disable center mode for ultra-small screens
-        },
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false, // Disable center mode for the smallest screens
-        },
-      },
-    ],
-    beforeChange: () => {
-      document
-        .querySelectorAll(`.${sliderClass} .slick-slide`)
-        .forEach((slide) => {
-          slide.classList.remove("scale-110", "z-20");
-        });
-    },
-    afterChange: (current) => {
-      const currentSlide = document.querySelector(
-        `.${sliderClass} .slick-slide[data-index="${current}"]`
-      );
-      if (currentSlide) {
-        currentSlide.classList.add("scale-110", "z-20");
-      }
-    },
-  });
+  const scrollContainerRef = useRef(null);
+
+  const handleScroll = (direction) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const scrollAmount = container.offsetWidth; // Scroll by the width of the container
+      container.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const sliderData = [
     {
       title: "StandUp Comedy",
-      images: [comedy1, comedy2, comedy3, comedy4, comedy5],
+      images: [comedy1, comedy2, comedy3, comedy4, comedy5, comedy1, comedy3, comedy4],
     },
     {
-      title: "Tv Shows",
-      images: [comedy1, comedy2, comedy3, comedy4, comedy5],
+      title: "TV Shows",
+      images: [comedy1, comedy2, comedy3, comedy4, comedy5, comedy1, comedy3, comedy4],
     },
     {
-      title: "Newwwwww",
-      images: [comedy1, comedy2, comedy3, comedy4, comedy5],
+      title: "New Releases",
+      images: [comedy1, comedy2, comedy3, comedy4, comedy5, comedy1, comedy3, comedy4],
     },
   ];
 
-  const renderSlider = (title, images, sliderClass) => (
+  const renderSlider = (title, images) => (
     <div className="mb-12">
-      <br />
-      <h1 className="lg:text-4xl xs:text-3xl xs:pl-5 font-bold text-white text-start lg:pl-8 mb-6">
-        {title}
-      </h1>
-
-      <br />
-      <Slider
-        {...getSettings(sliderClass)}
-        className={`slider ${sliderClass} px-4`}
+      <div className="flex items-center justify-between lg:pl-8 xs:pl-5">
+        <h1 className="lg:text-4xl xs:text-3xl font-bold font-akira text-white text-start mb-6">
+          {title}
+        </h1>
+        <div className="flex gap-4">
+          <button
+            className="bg-black text-white py-2 px-4 rounded-2xl"
+            onClick={() => handleScroll("left")}
+          >
+            {"<"}
+          </button>
+          <button
+            className="bg-black text-white py-2 px-4 rounded-2xl"
+            onClick={() => handleScroll("right")}
+          >
+            {">"}
+          </button>
+        </div>
+      </div>
+      <div
+        ref={scrollContainerRef}
+        className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-4"
       >
         {images.map((image, index) => (
-          <div key={index} className="p-4">
-            <div className="bg-[#120621] text-white rounded-2xl shadow-lg p-6 text-center transition-transform duration-300">
+          <div
+            key={index}
+            className="min-w-[250px] group relative hover:opacity-100 opacity-70 transition-opacity duration-300"
+          >
+            <div
+              className="bg-[#120621] text-white rounded-2xl shadow-lg p-4 text-center 
+              transition-transform duration-300 transform group-hover:scale-105"
+            >
               <h3 className="text-lg font-bold">{`Card ${index + 1}`}</h3>
               <div className="my-4">
                 <img
                   src={image}
                   alt={`Card ${index + 1}`}
-                  className="w-auto h-auto mx-auto rounded"
+                  className="w-[200px] h-[150px] mx-auto rounded object-cover"
                 />
               </div>
-              <button className="bg-[#DB59FF] text-white py-2 px-4 rounded-2xl hover:bg-blue-600">
-                {`Button ${index + 1}`}
+              <button className="bg-[#DB59FF] text-white py-2 px-4 rounded-lg hover:bg-blue-600 cursor-pointer">
+                Watch Now
               </button>
             </div>
+            <div
+              className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"
+            ></div>
           </div>
         ))}
-      </Slider>
-      <br />
-      <br />
-      <br />
-      <div className="bg-[#120621] py-4 text-transparent select-none">fhj</div>
+      </div>
     </div>
   );
 
   return (
-    <div className="container lg:mb-32 mx-0 max-w-fit py-8">
-      {sliderData.map((slider, index) =>
-        renderSlider(slider.title, slider.images, `slider-${index}`)
-      )}
+    <div className="container lg:mb-32 mx-0 py-8 w-full">
+      {sliderData.map((slider) => renderSlider(slider.title, slider.images))}
     </div>
   );
 };

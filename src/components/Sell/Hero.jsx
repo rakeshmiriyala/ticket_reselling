@@ -6,7 +6,7 @@ import Navbar from "../Navbar.jsx"; // Import Navbar component
 const HeroSection = () => {
   return (
     <div
-      className="relative bg-cover bg-center h-auto flex flex-col"
+      className=" bg-cover bg-center h-screen flex flex-col"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Navbar Component */}
@@ -15,8 +15,9 @@ const HeroSection = () => {
       <div className="heading lg:px-8 lg:pt-20  xs:p-8 rounded-lg">
         <h1 className="lg:text-6xl md:text-3xl xs:text-2xl font-akira sm:text-2xl font-bold text-white">
           SHARE THE EXCITEMENT.{" "}
-          <span className="text-transparent select-none">s</span> SELL YOUR
-          TICKET
+        </h1>
+        <h1 className="lg:text-6xl md:text-3xl xs:text-2xl font-akira sm:text-2xl font-bold text-white">
+          SELL YOUR TICKET
         </h1>
       </div>
       <br className="xs:hidden" />
@@ -52,4 +53,5 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSection;  
+

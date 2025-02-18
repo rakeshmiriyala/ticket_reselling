@@ -38,26 +38,28 @@ const Navbarr = () => {
         {/* Middle: Menu options (hidden on small screens) */}
         <div className="hidden md:flex space-x-6">
           <Link to="/sportss" className="hover:text-pink-400">
-            Sports
+            SPORTS
           </Link>
           <Link to="/entertainmentt" className="hover:text-pink-400">
-            Entertainment
+            ENTERTAINMENT
           </Link>
           <Link to="/moviess" className="hover:text-pink-400">
-            Movies
+            MOVIES
           </Link>
           <Link to="/concertt" className="hover:text-pink-400">
-            Concert
+            CONCERT
           </Link>
         </div>
 
         {/* Right: Profile Picture */}
         <div className="hidden md:flex space-x-4 items-center">
-          <img
-            src={profilePic}
-            alt="Profile"
-            className="h-10 w-10 rounded-full border-2 border-pink-500 cursor-pointer"
-          />
+          <Link to="/profile"> {/* Redirect to the new page on click */}
+            <img
+              src={profilePic}
+              alt="Profile"
+              className="h-10 w-10 rounded-full border-2 border-pink-500 cursor-pointer"
+            />
+          </Link>
           <Link
             to="/sell"
             className="border-2 border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.7)] transition-shadow duration-300"
@@ -109,27 +111,29 @@ const Navbarr = () => {
             to="/sports"
             className="block px-6 py-3 text-black rounded-t-lg"
           >
-            Sports
+            SPORTS
           </Link>
           <Link to="/entertainment" className="block px-6 py-3 text-black">
-            Entertainment
+            ENTERAINMENT
           </Link>
           <Link to="/movies" className="block px-6 py-3 text-black">
-            Movies
+            MOVIES
           </Link>
           <Link
             to="/concert"
             className="block px-6 py-3 text-black rounded-b-lg"
           >
-            Concert
+            CONCERT
           </Link>
 
           <div className="flex flex-col space-y-3 px-6 py-4">
-            <img
-              src={profilePic}
-              alt="Profile"
-              className="h-10 w-10 rounded-full self-center"
-            />
+            <Link to="/profile"> {/* Redirect to the new page on click */}
+              <img
+                src={profilePic}
+                alt="Profile"
+                className="h-10 w-10 rounded-full self-center"
+              />
+            </Link>
             <Link
               to="/sell"
               className="border-2 border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.7)] transition-shadow duration-300"

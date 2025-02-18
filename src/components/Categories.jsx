@@ -95,7 +95,7 @@ const Categories = () => {
             <img
               src={image8}
               alt="Category 8"
-              className="w-full h-60 object-cover rounded-lg shadow-lg"
+              className="w-full h-80 object-cover rounded-lg shadow-lg"
               data-aos="fade-right" // Apply "move from right to left" animation to the image
             />
           </div>
