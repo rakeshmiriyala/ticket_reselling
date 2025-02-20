@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
 
         {/* Middle: Menu options (hidden on small screens) */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 font-bold">
           <Link to="/sports" className="hover:text-pink-400">
             SPORTS
           </Link>
@@ -99,7 +99,7 @@ const Navbar = () => {
       {/* Mobile Menu (only visible when hamburger menu is open) */}
       {isOpen && (
         <div
-          className="md:h rounded-3xl bg-white border-2 "
+          className="md:h rounded-3xl bg-white border-2 font-bold"
           data-aos="fade-down" // Apply the fade-down animation to the mobile menu
         >
           <Link

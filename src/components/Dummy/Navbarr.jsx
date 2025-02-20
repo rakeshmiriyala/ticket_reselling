@@ -36,7 +36,7 @@ const Navbarr = () => {
         </div>
 
         {/* Middle: Menu options (hidden on small screens) */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 font-bold">
           <Link to="/sportss" className="hover:text-pink-400">
             SPORTS
           </Link>
@@ -104,7 +104,7 @@ const Navbarr = () => {
       {/* Mobile Menu (only visible when hamburger menu is open) */}
       {isOpen && (
         <div
-          className="md:h rounded-3xl bg-white border-2"
+          className="md:h rounded-3xl bg-white border-2 font-bold"
           data-aos="fade-down"
         >
           <Link

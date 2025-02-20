@@ -27,12 +27,10 @@ const RegisterPage = () => {
             backgroundImage: `url(${backgroundImage})`,
           }}
         ></div>
-
         {/* Right Half */}
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-[#1A082F] text-white p-8">
           <h1 className="text-4xl font-bold mb-4">Sign up</h1>
           <p className="mb-6 text-[#E176FF]">Sign up now and start swapping</p>
-
           <form className="w-full max-w-sm" onSubmit={handleSubmit}>
             <input
               type="text"
@@ -59,14 +57,8 @@ const RegisterPage = () => {
               Register
             </button>
           </form>
-
           <Link to="/login" className="my-4">
             <span className="no-underline">Already have an account? </span>
-            <span className="underline text-[#E176FF]">Login</span>
-          </Link>
-          <p>OR</p>
-          <Link to="/blogin" className="mt-4">
-            <span className="no-underline">Already have an Busines account? </span>
             <span className="underline text-[#E176FF]">Login</span>
           </Link>
         </div>
