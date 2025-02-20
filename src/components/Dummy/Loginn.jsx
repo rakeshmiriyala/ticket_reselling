@@ -24,14 +24,14 @@ const LoginPage = () => {
       <div className="flex flex-col md:flex-row h-auto">
         {/* Left Side - Image */}
         <div
-          className="hidden md:block md:w-1/2 bg-cover bg-center h-[720px]"
+          className="md:w-1/2 bg-cover bg-center lg:h-[720px] xs:h-[350px]"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         ></div>
 
         {/* Right Side - Login Form */}
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-[#1A082F] text-white p-8">
-          <h1 className="text-4xl font-bold mb-4">Login</h1>
-          <p className="mb-6">Enter your phone number to receive an OTP.</p>
+          <h1 className="text-4xl xs:text-2xl font-bold mb-4">Login</h1>
+          <p className="mb-6 xs:text-xs text-xl ">Enter your phone number to receive an OTP.</p>
 
           {/* Phone Number Input */}
           <input
