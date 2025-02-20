@@ -12,7 +12,7 @@ const OtpPage = () => {
 
   const handleVerifyOtp = () => {
     if (otp.length === 6) {
-      navigate("/dummy"); // Redirect to Home Page after successful verification
+      navigate("/login"); // Redirect to Home Page after successful verification
     } else {
       alert("Please enter a valid 6-digit OTP.");
     }

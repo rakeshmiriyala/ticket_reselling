@@ -52,12 +52,12 @@ const Navbar = () => {
 
         {/* Right: Buttons */}
         <div className="hidden  md:flex space-x-4">
-          <Link to="/signin" className="px-5 hover:text-pink-500 py-2 rounded-lg">
+          <Link to="/signin" className="px-5 font-bold hover:text-pink-500 py-2 rounded-lg">
             Sign In
           </Link>
           <Link
             to="/sell"
-            className="border-2 border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.8)] transition-shadow duration-200"
+            className="border-2 font-bold border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.8)] transition-shadow duration-200"
           >
             Sell
           </Link>
@@ -123,13 +123,13 @@ const Navbar = () => {
           <div className="flex flex-col space-y-3 px-6 py-4">
             <Link
               to="/signin"
-              className="px-1 py-3 rounded-lg text-black hover:bg-[#DB59FF]"
+              className="px-1 py-3 font-bold rounded-lg text-black hover:bg-[#DB59FF]"
             >
               Sign In
             </Link>
             <Link
               to="/sell"
-              className="border-2 border-pink-500 text-black px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.7)] transition-shadow duration-300"
+              className="border-2 font-bold border-pink-500 text-black px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.7)] transition-shadow duration-300"
             >
               Sell
             </Link>

@@ -62,7 +62,7 @@ const Navbarr = () => {
           </Link>
           <Link
             to="/sell"
-            className="border-2 border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.7)] transition-shadow duration-300"
+            className="border-2 font-bold border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.7)] transition-shadow duration-300"
           >
             Sell
           </Link>
@@ -136,7 +136,7 @@ const Navbarr = () => {
             </Link>
             <Link
               to="/sell"
-              className="border-2 border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.7)] transition-shadow duration-300"
+              className="border-2 font-bold border-pink-500 px-5 py-2 rounded-lg hover:bg-pink-500 hover:shadow-[0_0_10px_3px_rgba(236,72,153,0.7)] transition-shadow duration-300"
             >
               Sell
             </Link>

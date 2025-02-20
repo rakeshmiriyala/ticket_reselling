@@ -86,12 +86,12 @@ const Services = () => {
           {cards.map((card) => (
             <div key={card.id} className="px-4 focus:outline-none">
               <div
-                className="bg-[#180825] rounded-lg overflow-hidden shadow-lg  relative group transition-all duration-300"
+                className="bg-[#180825] rounded-lg overflow-hidden shadow-lg relative group transition-all duration-300 transform hover:scale-105"
                 style={{ height: "420px" }}
               >
                 {/* Background image only visible on hover */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100  transition-opacity duration-300"
+                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{ backgroundImage: `url(${bgImage1})` }}
                 ></div>
                 <div className="relative z-10 p-4 flex flex-col h-full">
