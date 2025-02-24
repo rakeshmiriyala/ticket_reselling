@@ -47,8 +47,8 @@ const Footer = () => {
 
       {/* Second Row */}
       <div className="footer-row">
-        <footer className="footer bg-[#120621] text-base-content p-10  py-5">
-          <nav>
+        <footer className="footer bg-[#120621] lg:text-xl md:text-xl xs:text-lg text-base-content p-10  py-5">
+          <nav className="hidden lg:flex lg:flex-col">
             <h6 className="footer-title">Services</h6>
             <a className="link link-hover">Branding</a>
             <a className="link link-hover">Design</a>
@@ -69,18 +69,22 @@ const Footer = () => {
             <a className="link link-hover">Cookie policy</a>
           </nav>
           <form>
-            <h6 className="footer-title xs:hidden lg:block">Newsletter</h6>
-            <fieldset className="xs:hidden lg:block md:block form-control w-auto">
+            <h6 className="footer-title ">Newsletter</h6>
+            <fieldset className="text-xl form-control w-full max-w-lg mx-auto">
               <label className="label">
-                <span className="label-text">Enter your email address</span>
+                <span className="label-text text-lg md:text-xl">
+                  Enter your email address
+                </span>
               </label>
-              <div className="join">
+              <div className="join flex flex-col sm:flex-row gap-2">
                 <input
                   type="text"
                   placeholder="username@site.com"
-                  className="input input-bordered join-item"
+                  className="input input-bordered join-item w-full sm:w-auto"
                 />
-                <button className="btn btn-primary join-item">Subscribe</button>
+                <button className="btn btn-primary join-item w-full sm:w-auto">
+                  Subscribe
+                </button>
               </div>
             </fieldset>
           </form>
@@ -89,7 +93,7 @@ const Footer = () => {
 
       {/* Third Row */}
       <div className="footer-row">
-        <footer className="footer bg-[#120621] footer-center text-base-content p-4">
+        <footer className="footer bg-[#120621] footer-center text-lg text-base-content p-4">
           <aside>
             <p>
               Copyright © {new Date().getFullYear()} - All rights reserved by

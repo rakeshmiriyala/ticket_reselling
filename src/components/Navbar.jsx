@@ -15,7 +15,7 @@ const Navbar = () => {
       easing: "ease-out", // Animation easing
       once: true, // Trigger animation only once
     });
-  }, []);
+  },[]);
 
   return (
     <nav
@@ -33,7 +33,6 @@ const Navbar = () => {
             />
           </Link>
         </div>
-
         {/* Middle: Menu options (hidden on small screens) */}
         <div className="hidden md:flex space-x-6 font-bold">
           <Link to="/sports" className="hover:text-pink-400">
@@ -49,7 +48,6 @@ const Navbar = () => {
             CONCERT
           </Link>
         </div>
-
         {/* Right: Buttons */}
         <div className="hidden  md:flex space-x-4">
           <Link to="/signin" className="px-5 font-bold hover:text-pink-500 py-2 rounded-lg">
@@ -73,7 +71,7 @@ const Navbar = () => {
               className="w-6 h-6"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
+              viewBox="0 0 24 24" 
               xmlns="http://www.w3.org/2000/svg"
             >
               {isOpen ? (
@@ -95,7 +93,6 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu (only visible when hamburger menu is open) */}
       {isOpen && (
         <div

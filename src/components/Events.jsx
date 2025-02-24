@@ -86,8 +86,8 @@ const Services = () => {
           {cards.map((card) => (
             <div key={card.id} className="px-4 focus:outline-none">
               <div
-                className="bg-[#180825] rounded-lg overflow-hidden shadow-lg relative group transition-all duration-300 transform hover:scale-105"
-                style={{ height: "420px" }}
+                className="bg-[#180825] rounded-lg overflow-hidden shadow-lg relative group transition-all duration-300 transform hover:scale-110"
+                style={{ height: "500px" }}
               >
                 {/* Background image only visible on hover */}
                 <div

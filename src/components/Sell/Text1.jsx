@@ -3,7 +3,7 @@ import React from "react";
 
 const ResponsiveText = () => {
   return (
-    <div className="p-6 flex flex-col bg-[#561CCB] justify-center  text-start bg-cover bg-center">
+    <div className="p-6 flex flex-col bg-black justify-center  text-start bg-cover bg-center">
       <div className="heading lg:p-4 xs:p-2 rounded-lg">
         <h1 className="lg:text-6xl md:text-3xl xs:text-2xl  font-akira sm:text-2xl font-bold text-white">
           HOW TO <span className="text-[#E176FF]">SELL </span>?
