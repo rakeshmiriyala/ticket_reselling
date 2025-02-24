@@ -1,40 +1,45 @@
-import { FaUpload, FaArrowRight, FaTag, FaDollarSign } from "react-icons/fa"; // Importing icons
+import { IoIosArrowDropright } from "react-icons/io";
+import One from "../../assets/Upload_your_tickets.png";
+import Two from "../../assets/Set_your_price.png"; // Add your second image
+import Three from "../../assets/Get_paid.png"; // Add your third image
 
-const ProcessSteps = () => {
+const ProcessIcons = () => {
   return (
-    <div className="mx-auto bg-[#0F0039] px-6 py-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
-        {/* First Step - Upload Your Ticket */}
-        <div className="relative flex flex-col items-center justify-center p-6 rounded-lg transition-all">
-          <FaUpload className="text-5xl text-pink-500 mb-4" />
-          <h3 className="text-lg font-semibold mb-2">Upload Your Ticket</h3>
-          <p className="text-white text-lg text-center">
-            Start by uploading your event tickets.
-          </p>
-          <FaArrowRight className="absolute hidden md:block right-[-20px] top-1/2 transform -translate-y-1/2 text-3xl text-pink-500" />
+    <div className="mx-auto bg-cover bg-center px-6 py-12 flex justify-center bg-gradient-to-b from-black to-[#090320]">
+      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
+        
+        {/* Upload Icon (Using Image) */}
+        <div className="flex flex-col items-center">
+          <div className="flex items-center justify-center p-6 border-2 border-pink-500 rounded-xl w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+            <img src={One} alt="Upload Your Tickets" className="w-full h-full object-contain" />
+          </div>
+          <h3 className="text-sm sm:text-md md:text-lg font-semibold mt-4 text-white">Upload Your Tickets</h3>
         </div>
 
-        {/* Second Step - Set Price */}
-        <div className="relative flex flex-col items-center justify-center p-6 rounded-lg transition-all">
-          <FaTag className="text-5xl text-pink-500 mb-4" />
-          <h3 className="text-lg font-semibold mb-2">Set Price</h3>
-          <p className="text-white text-lg text-center">
-            Choose your preferred price for the ticket.
-          </p>
-          <FaArrowRight className="absolute hidden md:block right-[-20px] top-1/2 transform -translate-y-1/2 text-3xl text-pink-500" />
+        {/* Arrow */}
+        <IoIosArrowDropright className="text-pink-500 text-3xl md:text-4xl lg:text-5xl hidden sm:block" />
+
+        {/* Set Price Icon (Using Image) */}
+        <div className="flex flex-col items-center">
+          <div className="flex items-center justify-center p-6 border-2 border-pink-500 rounded-xl w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+            <img src={Two} alt="Set Price" className="w-full h-full object-contain" />
+          </div>
+          <h3 className="text-sm sm:text-md md:text-lg font-semibold mt-4 text-white">Set Your Price </h3>
         </div>
 
-        {/* Third Step - Get Paid */}
-        <div className="relative flex flex-col items-center justify-center p-6 rounded-lg border-pink-400 transition-all">
-          <FaDollarSign className="text-5xl text-pink-500 mb-4" />
-          <h3 className="text-lg font-semibold mb-2">Get Paid</h3>
-          <p className="text-white text-lg text-center">
-            Receive your payment once the ticket is sold.
-          </p>
+        {/* Arrow */}
+        <IoIosArrowDropright className="text-pink-500 text-3xl md:text-4xl lg:text-5xl hidden sm:block" />
+
+        {/* Get Paid Icon (Using Image) */}
+        <div className="flex flex-col items-center">
+          <div className="flex items-center justify-center p-6 border-2 border-pink-500 rounded-xl w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+            <img src={Three} alt="Get Paid" className="w-full h-full object-contain" />
+          </div>
+          <h3 className="text-sm sm:text-md md:text-lg font-semibold mt-4 text-white">Get Paid</h3>
         </div>
       </div>
     </div>
   );
 };
 
-export default ProcessSteps;
+export default ProcessIcons;

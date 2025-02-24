@@ -20,11 +20,11 @@ const FAQDownloadSection = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center lg:pl-20 justify-between h-auto p-10 bg-gray-100">
+    <div className="flex flex-col md:flex-row items-center lg:pl-20 justify-between h-auto p-10 bg-gradient-to-b from-[#120f22] to-black">
       {/* FAQ Section */}
       <div className="w-full md:w-1/2   p-4">
         <div className="text-center mb-6">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">FAQ Section</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">FAQ Section</h1>
         </div>
         {faqData.map((item, index) => (
           <div key={index} className="py-3">
@@ -44,7 +44,7 @@ const FAQDownloadSection = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <p className="mt-2 text-black">{item.answer}</p>
+                  <p className="mt-2 text-white">{item.answer}</p>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -53,8 +53,8 @@ const FAQDownloadSection = () => {
       </div>
 
       {/* Download Section */}
-      <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-100 p-4 md:pr-10 mt-6 md:mt-0">
-        <h1 className="text-2xl text-black font-bold mb-6">Download the Ticket Resell App</h1>
+      <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:pr-10 mt-6 md:mt-0">
+        <h1 className="text-2xl text-white font-bold mb-6">Download the Ticket Resell App</h1>
         <div className="flex space-x-4">
           <a
             href="https://apps.apple.com/app/example"
