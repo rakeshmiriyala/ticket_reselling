@@ -39,12 +39,12 @@ const Entertainment = () => {
     <div className="mb-12">
       {/* Heading with Icon */}
       <div className="flex items-center justify-center px-5 gap-3">
-        <img
+        {/* <img
           src={icon}
           alt={title}
           className="w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:h-10 rounded object-cover"
-        />
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:pt-4 md:pt-3 text-white lg:mb-6 md:mb-4 xs:mb-3 xs:pt-2 text-center font-bold">
+        /> */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:pt-4 md:pt-3 text-white lg:mb-6 md:mb-4 xs:mb-3 xs:pt-2 text-center font-akira font-bold">
           {title}
         </h1>
       </div>
@@ -55,7 +55,7 @@ const Entertainment = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="snap-center flex-shrink-0 w-[130px] sm:w-[180px] md:w-[220px] lg:w-[250px] 
+              className="snap-center flex-shrink-0 w-[160px] sm:w-[200px] md:w-[250px] lg:w-[300px] xl:w-[320px]
                         transition-opacity duration-300 opacity-100 group-hover:opacity-50 hover:!opacity-100"
             >
               <div

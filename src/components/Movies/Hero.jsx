@@ -15,10 +15,10 @@ const HeroSection = () => {
       <br />
       {/* Two Lines of Text */}
       <div className="text-start bg-[#120621] backdrop-blur-lg z-0 bg-opacity-70 lg:px-10 lg:py-2 xs:py-1 md:py-2 xs:px-4">
-        <h1 className="lg:text-4xl xs:text-2xl md:text-4xl  font-bold text-white">
+        <h1 className="lg:text-4xl xs:text-2xl md:text-4xl  font-bold text-white text-center">
           Movies
         </h1>
-        <p className="lg:text-lg xs:text-md md:text-lg text-gray-300 mt-1">
+        <p className="lg:text-lg xs:text-md md:text-lg text-gray-300 mt-1 text-center">
           Threaterssss
         </p>
       </div>

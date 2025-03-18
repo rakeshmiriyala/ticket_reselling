@@ -16,6 +16,8 @@ import LoginPage from "./components/Dummy/Loginn";
 import Dummmy from "./components/Dummy/Dummmy";
 import Profile from "./components/Dummy/Profile";
 import OtpPage from "./components/Dummy/Otp";
+import BookingPage from "./components/Concerts/Booking";
+import EventSelection from "./components/Concerts/Eventselection";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
         <Route path="/sports" element={<SLanding />} />
         <Route path="/sportss" element={<SLandingg />} />
         <Route path="/concert" element={<CLanding />} />
+        <Route path="/booking/:categoryId/:cardIndex" element={<BookingPage />} />
+        <Route path="/select-event/:categoryId/:cardIndex" element={<EventSelection />} />
         <Route path="/concertt" element={<CLandingg />} />
         <Route path="/entertainment" element={<ELanding />} />
         <Route path="/entertainmentt" element={<ELandingg />} />

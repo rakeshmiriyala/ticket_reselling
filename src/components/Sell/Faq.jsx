@@ -14,7 +14,6 @@ const faqData = [
 
 const FAQDownloadSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -51,7 +50,6 @@ const FAQDownloadSection = () => {
           </div>
         ))}
       </div>
-
       {/* Download Section */}
       <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:pr-10 mt-6 md:mt-0">
         <h1 className="text-2xl text-white font-bold mb-6">Download the Ticket Resell App</h1>
