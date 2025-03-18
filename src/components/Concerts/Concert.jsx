@@ -23,15 +23,15 @@ const Concert = () => {
     },
     {
       id: "other-events",
-      title: "OTHER EVENTS",
+      title: "COMEDY SHOWS",
       icon: eventsIcon,
-      images: [music1, music2, music3, music4, music5, music1, music3, music4],
+      images: [music2, music3, music4, music5, music1, music3, music4 , music1],
     },
     {
       id: "fests-parties",
-      title: "FESTS AND PARTIES",
+      title: "CULTURAL EVENTS",
       icon: festsIcon,
-      images: [music1, music2, music3, music4, music5, music1, music3, music4],
+      images: [ music3, music4, music5, music1, music3, music4, music1, music2,],
     },
   ];
 

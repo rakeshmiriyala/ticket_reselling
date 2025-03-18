@@ -18,20 +18,20 @@ const Entertainment = () => {
   const sliderData = [
     
     {
-      title: "FARM HOUSE",
+      title: "AMUSEMENT PARKS",
       icon: FarmHouse,
       images: [comedy1, comedy2, comedy3, comedy4, comedy5, comedy1, comedy3, comedy4],
     },
     
     {
-      title: "EXHIBITION",
+      title: "GO KARTING",
       icon: releasesIcon,
-      images: [comedy1, comedy2, comedy3, comedy4, comedy5, comedy1, comedy3, comedy4],
+      images: [comedy2, comedy3, comedy4, comedy5, comedy1, comedy3, comedy4, comedy1],
     },
     {
-      title: "STANDUP COMDEY",
+      title: "ADVENTURE PARK",
       icon: standupIcon,
-      images: [comedy1, comedy2, comedy3, comedy4, comedy5, comedy1, comedy3, comedy4],
+      images: [comedy3, comedy4, comedy5, comedy1, comedy3, comedy4, comedy1, comedy2],
     },
   ];
 

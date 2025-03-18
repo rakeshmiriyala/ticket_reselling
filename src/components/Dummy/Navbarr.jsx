@@ -41,13 +41,13 @@ const Navbarr = () => {
             SPORTS
           </Link>
           <Link to="/entertainmentt" className="hover:text-pink-400">
-            ENTERTAINMENT
+          ACTIVITES
           </Link>
           <Link to="/moviess" className="hover:text-pink-400">
             MOVIES
           </Link>
           <Link to="/concertt" className="hover:text-pink-400">
-            CONCERT
+          EVENTS
           </Link>
         </div>
 
@@ -114,7 +114,7 @@ const Navbarr = () => {
             SPORTS
           </Link>
           <Link to="/entertainment" className="block px-6 py-3 text-black">
-            ENTERAINMENT
+          ACTIVITES
           </Link>
           <Link to="/movies" className="block px-6 py-3 text-black">
             MOVIES
@@ -123,7 +123,7 @@ const Navbarr = () => {
             to="/concert"
             className="block px-6 py-3 text-black rounded-b-lg"
           >
-            CONCERT
+            EVENTS
           </Link>
 
           <div className="flex flex-col space-y-3 px-6 py-4">

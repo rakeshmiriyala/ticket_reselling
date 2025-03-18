@@ -17,11 +17,11 @@ const Movies = () => {
     },
     {
       title: "COMEDY SHOWS",
-      images: [festival1, festival2, festival3, festival4, festival5, festival1, festival3, festival4],
+      images: [festival2, festival3, festival4, festival5, festival1, festival3, festival4, festival1],
     },
     {
       title: "FESTIVAL CELEBRATION",
-      images: [festival1, festival2, festival3, festival4, festival5, festival1, festival3, festival4],
+      images: [festival3, festival4, festival5, festival1, festival3, festival4, festival1, festival2],
     },
   ];
 
